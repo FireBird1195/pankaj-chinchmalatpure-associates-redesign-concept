@@ -29,3 +29,11 @@ Candidate: commit "v3: Measured from Zero Mile" on `main`. Method: `qa/run.mjs` 
 - Source images are about 500–1000 px, so they look soft on large retina screens. The design keeps them at moderate sizes; production needs the practice's originals.
 - The archive is rendered by JavaScript (with a `<noscript>` note). That is fine for a noindex concept; production should render it server-side or statically for SEO.
 - Room names for interiors and anonymised bungalow labels were written by the concept author.
+
+## Live inspection of the deployed GitHub Pages build (26 Nov 2026)
+Checked https://firebird1195.github.io/pankaj-chinchmalatpure-associates-redesign-concept/ in a real browser (Chromium, about 1024 px wide).
+- **PASS:** v3 is deployed; title, `noindex`, all 63 index rows and the map data are present; no failed requests or console errors; no horizontal overflow.
+- **FIXED, body font never loaded:** Mukta's Devanagari face declared a weight range (`400 600`) that captured all weight-400 matching, so Latin body text fell back to the system font (Inter/Segoe). Each face now has a single weight. Confirmed by checking which font each node actually renders with.
+- **FIXED, layout at 1024 px:** the title block was squeezed in the Market chapter (now stacked), the chain bar could highlight the wrong chapter (now computed from scroll position), Market images were not filling their column, and the township images were unequal heights.
+- **FIXED:** removed a `data:,` placeholder image in the lightbox that showed up as a broken image.
+- A 1024 × 768 viewport was added to the automated run; all 8 page × viewport runs pass.

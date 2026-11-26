@@ -19,6 +19,15 @@
  },
  {
   "pg": "index.html",
+  "w": 1024,
+  "overflow": 0,
+  "robots": "noindex, nofollow",
+  "brokenAnchors": [],
+  "consoleErrors": [],
+  "badResponses": []
+ },
+ {
+  "pg": "index.html",
   "w": 1440,
   "overflow": 0,
   "robots": "noindex, nofollow",
@@ -46,6 +55,15 @@
  },
  {
   "pg": "case-study-apmc.html",
+  "w": 1024,
+  "overflow": 0,
+  "robots": "noindex, nofollow",
+  "brokenAnchors": [],
+  "consoleErrors": [],
+  "badResponses": []
+ },
+ {
+  "pg": "case-study-apmc.html",
   "w": 1440,
   "overflow": 0,
   "robots": "noindex, nofollow",
@@ -60,7 +78,7 @@
    "phoneErr": "Enter a 10-digit mobile, or a landline with STD code.",
    "done": true,
    "doneText": "Thank you. Your enquiry is complete.",
-   "networkRequestsAfterSubmit": 125,
+   "networkRequestsAfterSubmit": 127,
    "formBack": true
   },
   "filterInteriorRows": 30,

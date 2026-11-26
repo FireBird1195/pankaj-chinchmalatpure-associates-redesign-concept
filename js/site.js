@@ -44,16 +44,19 @@
     select("nagpur");
   }
 
-  /* Chain: highlight the chapter in view */
-  var chainLinks = $$(".chain a");
-  if (chainLinks.length && "IntersectionObserver" in window) {
-    var chio = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        chainLinks.forEach(function (a) { a.setAttribute("aria-current", String(a.getAttribute("href") === "#" + e.target.id)); });
-      });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    ["market", "mill", "school", "city", "home"].forEach(function (id) { var s = document.getElementById(id); if (s) chio.observe(s); });
+  /* Chain: highlight the chapter in view (the last chapter whose top has passed 40% of the viewport) */
+  var chainLinks = $$(".chain a"), chIds = ["market", "mill", "school", "city", "home"];
+  if (chainLinks.length) {
+    var ticking = false;
+    var updateChain = function () {
+      ticking = false;
+      var line = window.innerHeight * 0.4, cur = null;
+      chIds.forEach(function (id) { var s = document.getElementById(id); if (s && s.getBoundingClientRect().top <= line && s.getBoundingClientRect().bottom > 0) cur = id; });
+      var past = document.getElementById("home"); if (past && past.getBoundingClientRect().bottom < line) cur = null;
+      chainLinks.forEach(function (a) { a.setAttribute("aria-current", String(a.getAttribute("href") === "#" + cur)); });
+    };
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(updateChain); } }, { passive: true });
+    updateChain();
   }
 
   /* Archive data → series, rail, index, lightbox */

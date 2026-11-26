@@ -5,7 +5,7 @@ const types = {".html":"text/html",".css":"text/css",".js":"text/javascript",".w
 const srv = http.createServer(async (q,s)=>{ let p=decodeURIComponent(q.url.split("?")[0]); if(p.endsWith("/"))p+="index.html";
   try{const b=await readFile(path.join(root,p)); s.writeHead(200,{"content-type":types[path.extname(p)]||"application/octet-stream"}); s.end(b);}catch{ s.writeHead(404); s.end("nf");}}).listen(4173);
 const b = await chromium.launch(); const out=[];
-const pages=["index.html","case-study-apmc.html"]; const vps=[[390,844],[768,1024],[1440,900]];
+const pages=["index.html","case-study-apmc.html"]; const vps=[[390,844],[768,1024],[1024,768],[1440,900]];
 for (const pg of pages) for (const [w,h] of vps) {
   const p = await b.newPage({viewport:{width:w,height:h}}); const errs=[]; const bad=[];
   p.on("console",m=>{if(m.type()==="error")errs.push(m.text())}); p.on("pageerror",e=>errs.push(e.message));
