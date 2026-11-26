@@ -54,3 +54,23 @@ Screenshots of external sites were attempted in the browser pane; several did no
 - **What the first version lacked.** It had no real work above the fold, and an abstract map asked visitors to interpret it before they knew what the practice does. Architecture-homepage guidance favours one strong visual statement of the work, the positioning in plain words, and one clear next step (nicepage, "Architecture & Building Homepage Designs").
 - **The milestone motif.** Indian roadside milestones are white stones with a coloured cap: yellow for a national highway, green for a state highway, blue or black for city and district roads, and orange for a village road (rural roads / PMGSY). Sources: OrissaPOST, Udayavani, Civil4M. An orange-capped stone is the roadside marker for the village roads that lead to the APMC towns. The logo's coral is close to that orange, so the brand colour and the local reference coincide.
 - **The interaction.** The hovered or focused stone widens to show its work; nothing auto-plays. It works by keyboard, and the motion is disabled under reduced-motion settings.
+
+## Hero, third revision: Dribbble and Behance research (27 Nov 2026)
+I reviewed Dribbble's "architecture website hero" results and Behance's "architecture studio website" projects.
+
+**Recurring patterns that work:**
+- **Giant wordmark with the building in front.** An oversized word sits behind the building and the building overlaps it ("SOLA", "NORDEN", "BEYOND", "EMBER").
+- **One real building as the hero.** A single building, not a collage.
+- **Little text.** A short headline bottom-left.
+- **A floating project card.** A card with a thumbnail and "View project" sits bottom-right.
+- **Technical annotation.** ZÁMOK uses coordinates and degree marks with an orange accent.
+
+**What I took, made local:**
+- **The word is नागपूर, in the site's Devanagari face and the logo's coral.**
+- **The building in front is the practice's own.** It is Manjusha Regalia (the name is on the rendering's signage); I removed the sky from their rendering with a colour-based mask and feathered the ground and edges.
+- **The annotation is Nagpur's coordinates, 21.15° N · 79.08° E**, a quiet echo of Zero Mile.
+- **The floating card leads to the APMC case study.**
+
+**What I did not take:**
+- Full-bleed stock-style photography (the practice's images are low-resolution renderings).
+- Glassmorphism and dark luxury palettes.

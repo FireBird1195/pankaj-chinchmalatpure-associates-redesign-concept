@@ -7,7 +7,7 @@ v1 and v2 were competent but generic: either a typographic brochure or a portfol
 
 ## Pages, sections and interactions
 **Home**
-1. **Hero (revised): "Market yards to family homes. Designed in Nagpur since 1980."** Five roadside milestones stand on a road, one for each chapter. Each has a coral cap with the Marathi chapter word, and the practice's own work on its face. The milestone you point at or focus widens to show its work. The Mill stone has no image because no drawings are published; it carries the cotton chain in type instead. On phones the stones become a swipeable row. A kerb line underneath reads "नागपूर · 0 km". The interactive Zero Mile map moved into the Market chapter, where the five market towns give it a purpose.
+1. **Hero (third revision).** A giant coral नागपूर sits behind the practice's own Manjusha Regalia building (sky cut out of the rendering), with Nagpur's coordinates, "Practice since 1980", the headline "Market yards to family homes, designed in Nagpur.", two calls to action and a floating APMC case-study card. On phones the stack is: word, building, text, card.
 2. **Sticky chain bar.** बाजार Market → गिरणी Mill → शाळा School → शहर City → घर Home, highlighting the chapter in view.
 3. **Market.** The godowns rendering with its real title block, shed and auditorium, and a case-study link.
 4. **Mill.** A cotton-chain diagram (कापूस → जिनिंग → प्रेसिंग → सूतगिरणी) placing the two co-operative clients on it, with an honest note that no drawings are published.

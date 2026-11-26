@@ -42,7 +42,7 @@ window.PCA_ARCHIVE = (function () {
     { id: "F-13", type: "flats", title: "R. K.", sub: "Flat scheme", file: "rk", kind: r },
     { id: "F-14", type: "flats", title: "Aryaditya Developers — scheme A", sub: "For Aryaditya Developers", file: "aryaditya-a", kind: r },
     { id: "F-15", type: "flats", title: "Aryaditya Developers — scheme B", sub: "For Aryaditya Developers", file: "aryaditya-b", kind: r },
-    { id: "F-16", type: "flats", title: "Flat scheme", sub: "Flat scheme", file: "flat-scheme-1", kind: r },
+    { id: "F-16", type: "flats", title: "Manjusha Regalia", sub: "Flat scheme", file: "flat-scheme-1", kind: r },
     { id: "F-17", type: "flats", title: "Flat scheme", sub: "Flat scheme", file: "flat-scheme-2", kind: r },
     // Bungalows (private clients, not named)
     bung("01", "bungalow-01"), bung("02", "bungalow-02"), bung("03", "bungalow-03"), bung("04", "bungalow-04"),

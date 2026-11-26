@@ -43,3 +43,8 @@ Checked https://firebird1195.github.io/pankaj-chinchmalatpure-associates-redesig
 - axe: 0 violations on both pages at 1440 and 390, after replacing an ARIA list role on the links with a `<nav>`.
 - Hover and focus widening of the milestones was checked in screenshots. On phones the stones scroll horizontally with snap points and their descriptions are always visible.
 - Home page, local lab measurements: LCP 164–236 ms, CLS ≤ 0.017.
+
+## Hero third revision (27 Nov 2026)
+- All 8 page × viewport runs pass; axe reports 0 violations on both pages at 1440 and 390.
+- Home page: CLS ≤ 0.005; LCP (local, unthrottled lab) 140–260 ms.
+- The cut-out image was reviewed at 1440, 1024 and 390. The ground and side edges are feathered, and no sky remnants are visible against the cotton background.

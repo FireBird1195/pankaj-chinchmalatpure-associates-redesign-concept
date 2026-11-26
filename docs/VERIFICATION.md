@@ -27,6 +27,7 @@ Family relationship between the two architects: not stated anywhere. The concept
 | APMC auditorium and training centre (सभागृह तथा प्रशिक्षण केंद्र) | P/D | Filename `FINAL-A.P.M.C.-NAGPUR`; Marathi signage and emblem on the rendering |
 | Ushakaal-9, Plot 41 (as legible at the published resolution), Vinoba Gram Griha Nirman Sahakari Sanstha Layout, Nagpur; builders Swapna Shilp Developers, Pratap Nagar | D | Title block |
 | Ushakaal-1&2, 3, 4, 5, 6, 10, 12 | P | Filenames only; developer and location **C** |
+| Manjusha Regalia (F-16; the name is read from the signage on the rendering) | D | Developer, location, year **C** |
 | Konark Chambers, Hostel Nagpur, Shalwak Residency, Vijaya Villa, Swara Residency, Raje Bhonsale Mahal, R. K., Aryaditya Developers (×2) | P | Names from filenames; typology from the site gallery tab |
 | Pearl Heritage (site view, row houses, club house, flats, entrance) | P | Filenames + signage on the entrance rendering |
 | Nostalgia entrance gate | P | Signage on rendering. The 1BHK/2BHK bungalows and aerial are grouped with it in the "Township" tab, so the concept calls them "township bungalow", not "Nostalgia". Link **C** |

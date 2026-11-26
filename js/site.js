@@ -22,17 +22,6 @@
     rv.forEach(function (el) { io.observe(el); });
   } else rv.forEach(function (el) { el.classList.add("in"); });
 
-  /* Hero milestones: the hovered or focused stone widens to show its work */
-  var stones = $$(".road .stone");
-  if (stones.length) {
-    var setOn = function (el) { stones.forEach(function (s) { s.classList.toggle("on", s === el); }); };
-    stones.forEach(function (st) {
-      st.addEventListener("mouseenter", function () { setOn(st); });
-      st.addEventListener("focus", function () { setOn(st); });
-    });
-    setOn(stones[0]);
-  }
-
   /* Zero Mile map */
   var places = window.PCA_PLACES, chName = { market: "बाजार Market", mill: "गिरणी Mill", school: "शाळा School", city: "शहर City", home: "घर Home" };
   if (places && $(".zmap")) {
