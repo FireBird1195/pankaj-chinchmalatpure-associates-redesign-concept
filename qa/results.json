@@ -1,0 +1,71 @@
+[
+ {
+  "pg": "index.html",
+  "w": 390,
+  "overflow": 0,
+  "robots": "noindex, nofollow",
+  "brokenAnchors": [],
+  "consoleErrors": [],
+  "badResponses": []
+ },
+ {
+  "pg": "index.html",
+  "w": 768,
+  "overflow": 0,
+  "robots": "noindex, nofollow",
+  "brokenAnchors": [],
+  "consoleErrors": [],
+  "badResponses": []
+ },
+ {
+  "pg": "index.html",
+  "w": 1440,
+  "overflow": 0,
+  "robots": "noindex, nofollow",
+  "brokenAnchors": [],
+  "consoleErrors": [],
+  "badResponses": []
+ },
+ {
+  "pg": "case-study-apmc.html",
+  "w": 390,
+  "overflow": 0,
+  "robots": "noindex, nofollow",
+  "brokenAnchors": [],
+  "consoleErrors": [],
+  "badResponses": []
+ },
+ {
+  "pg": "case-study-apmc.html",
+  "w": 768,
+  "overflow": 0,
+  "robots": "noindex, nofollow",
+  "brokenAnchors": [],
+  "consoleErrors": [],
+  "badResponses": []
+ },
+ {
+  "pg": "case-study-apmc.html",
+  "w": 1440,
+  "overflow": 0,
+  "robots": "noindex, nofollow",
+  "brokenAnchors": [],
+  "consoleErrors": [],
+  "badResponses": []
+ },
+ {
+  "form": {
+   "errsShown": 4,
+   "focused": "path",
+   "phoneErr": "Enter a 10-digit mobile or landline with STD code.",
+   "done": true,
+   "doneText": "Thank you — your enquiry is complete.",
+   "networkRequestsAfterSubmit": 11,
+   "formBack": true
+  },
+  "filterHomeRows": 2,
+  "menuOpen": true,
+  "menuClosed": true,
+  "firstTab": "Skip to content"
+ }
+]
