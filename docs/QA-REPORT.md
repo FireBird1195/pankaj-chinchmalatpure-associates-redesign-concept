@@ -48,3 +48,16 @@ Checked https://firebird1195.github.io/pankaj-chinchmalatpure-associates-redesig
 - All 8 page × viewport runs pass; axe reports 0 violations on both pages at 1440 and 390.
 - Home page: CLS ≤ 0.005; LCP (local, unthrottled lab) 140–260 ms.
 - The cut-out image was reviewed at 1440, 1024 and 390. The ground and side edges are feathered, and no sky remnants are visible against the cotton background.
+
+## Senior UI/UX review pass (27 Nov 2026)
+Issues found and fixed:
+- **City chapter.** The Ushakaal series was 8 tall tiles in two rows of 4, which made the section about 1,500 px tall at desktop and 4,000 px on phones. It is now one row of 8 on desktop and a swipeable strip on phones.
+- **Map readout.** The client list was in small uppercase monospace "chips" that were hard to read. It is now a plain readable list, with the chapter links set apart.
+- **Enquiry form.** The "project management?" field sat alone in a half-empty row. The three optional fields now share one row.
+- **Bungalow rail.** It started at the page edge, out of line with the rest of the page. It now aligns with the content column.
+- **Case-study map.** The old schematic contradicted the homepage map (towns in different positions). Both now use the same data-driven map.
+- **Godowns diagram.** The labels overlapped the blocks; they have been repositioned.
+- **Hero.** The headline is now narrower and the building slightly smaller, so the two no longer collide at 1440 px.
+- **Phone chapter bar.** The bar now fades at its right edge to show that it scrolls.
+
+Re-tested: all 8 page × viewport runs pass with no overflow, console errors or failed requests; form, lightbox, menu and map checks pass; axe below.

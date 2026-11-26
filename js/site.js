@@ -24,7 +24,7 @@
 
   /* Zero Mile map */
   var places = window.PCA_PLACES, chName = { market: "बाजार Market", mill: "गिरणी Mill", school: "शाळा School", city: "शहर City", home: "घर Home" };
-  if (places && $(".zmap")) {
+  if (places && $(".zmap") && $("#readout")) {
     var pts = $$(".zmap .pt");
     var select = function (id) {
       var p = places[id]; if (!p) return;
@@ -34,7 +34,7 @@
       $("#ro-name").innerHTML = esc(p.en) + ' <span class="mr" lang="mr">' + p.mr + "</span>";
       $("#ro-note").innerHTML = esc(p.note || "") + (p.href ? (p.note ? " · " : "") + '<a href="' + p.href + '">Open</a>' : "");
       $("#ro-cl").innerHTML = p.cl.map(function (c) { return '<span class="chip">' + esc(c) + "</span>"; }).join("") +
-        p.ch.map(function (c) { return '<a class="chip" href="#' + c + '">' + chName[c] + " →</a>"; }).join("");
+        '<span class="links">' + p.ch.map(function (c) { return '<a class="chip" href="#' + c + '">' + chName[c] + " →</a>"; }).join("") + "</span>";
     };
     pts.forEach(function (g) {
       g.addEventListener("click", function () { select(g.dataset.id); });
