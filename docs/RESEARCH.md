@@ -49,3 +49,8 @@ Screenshots of external sites were attempted in the browser pane; several did no
 - Marathi words that mean something, not ornament.
 - Labelled renderings, not implied photographs.
 - An index, not a slider.
+
+## Hero revision (research)
+- **What the first version lacked.** It had no real work above the fold, and an abstract map asked visitors to interpret it before they knew what the practice does. Architecture-homepage guidance favours one strong visual statement of the work, the positioning in plain words, and one clear next step (nicepage, "Architecture & Building Homepage Designs").
+- **The milestone motif.** Indian roadside milestones are white stones with a coloured cap: yellow for a national highway, green for a state highway, blue or black for city and district roads, and orange for a village road (rural roads / PMGSY). Sources: OrissaPOST, Udayavani, Civil4M. An orange-capped stone is the roadside marker for the village roads that lead to the APMC towns. The logo's coral is close to that orange, so the brand colour and the local reference coincide.
+- **The interaction.** The hovered or focused stone widens to show its work; nothing auto-plays. It works by keyboard, and the motion is disabled under reduced-motion settings.

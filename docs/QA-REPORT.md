@@ -37,3 +37,9 @@ Checked https://firebird1195.github.io/pankaj-chinchmalatpure-associates-redesig
 - **FIXED, layout at 1024 px:** the title block was squeezed in the Market chapter (now stacked), the chain bar could highlight the wrong chapter (now computed from scroll position), Market images were not filling their column, and the township images were unequal heights.
 - **FIXED:** removed a `data:,` placeholder image in the lightbox that showed up as a broken image.
 - A 1024 × 768 viewport was added to the automated run; all 8 page × viewport runs pass.
+
+## Hero revision (26 Nov 2026)
+- All 8 page × viewport runs pass, with no overflow, console errors or failed requests. Form, index, lightbox, map (now in the Market chapter) and menu checks pass.
+- axe: 0 violations on both pages at 1440 and 390, after replacing an ARIA list role on the links with a `<nav>`.
+- Hover and focus widening of the milestones was checked in screenshots. On phones the stones scroll horizontally with snap points and their descriptions are always visible.
+- Home page, local lab measurements: LCP 164–236 ms, CLS ≤ 0.017.

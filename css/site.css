@@ -65,17 +65,59 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em
   .nav li .btn{margin-top:1rem;justify-content:center;border:0}
 }
 
-/* Hero: Zero Mile */
-.hero{padding:clamp(2rem,4vw,3.5rem) 0 clamp(2.5rem,5vw,4rem);border-bottom:1px solid var(--rule)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(1.5rem,4vw,4rem);align-items:center}
-.eyebrow{display:flex;gap:.75rem;align-items:center;color:var(--coral-ink);margin:0 0 1.5rem}
+/* Hero: the road out of Nagpur — five milestones, one per kind of work.
+   Indian roadside milestones are white stones with a coloured cap; an orange cap marks a village road,
+   the roads that lead to the market towns this practice built for. The cap colour is the logo's coral. */
+.hero{background:var(--soil);color:var(--cotton);padding:clamp(2.5rem,5vw,4.5rem) 0 0;overflow:hidden}
+.hero-top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:1.5rem clamp(2rem,5vw,5rem);align-items:end}
+.eyebrow{display:flex;gap:.75rem;align-items:center;color:var(--coral);margin:0 0 1.4rem}
 .eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px rgba(243,117,77,.25)}
-.hero h1{font-size:clamp(2.7rem,5.6vw,5rem);line-height:1;letter-spacing:-.02em}
-.hero h1 em{font-style:italic;color:var(--coral-ink)}
-.hero .lede{font-size:clamp(1.08rem,1.4vw,1.25rem);color:var(--muted);max-width:44ch;margin:1.5rem 0 2rem}
+.hero h1{font-size:clamp(2.5rem,4.6vw,4.4rem);line-height:1.02;letter-spacing:-.02em;max-width:15ch}
+.hero h1 em{display:block;font-style:italic;color:var(--coral)}
+.hero .lede{font-size:clamp(1.05rem,1.3vw,1.18rem);color:var(--muted-dk);margin:0 0 1.75rem;max-width:42ch}
 .hero .actions{display:flex;flex-wrap:wrap;gap:.75rem}
-@media (max-width:980px){.hero-grid{grid-template-columns:1fr}}
+.hero .btn.line{color:var(--cotton)}
+@media (max-width:900px){.hero-top{grid-template-columns:1fr}}
 
+.road{display:flex;gap:clamp(.5rem,1vw,.9rem);max-width:var(--max);margin:clamp(2.5rem,5vw,4rem) auto 0;padding:0 var(--g);height:clamp(20rem,42vh,27rem);align-items:flex-end}
+.stone{position:relative;flex:1 1 0;min-width:0;height:100%;display:flex;flex-direction:column;text-decoration:none;color:var(--soil);background:var(--cotton);border-radius:999px 999px 0 0/7.5rem 7.5rem 0 0;overflow:hidden;transition:flex-grow .6s var(--ease),transform .4s var(--ease)}
+.stone .cap{flex:none;height:clamp(4.6rem,7vw,5.6rem);background:var(--coral);display:flex;align-items:flex-end;justify-content:center;padding-bottom:.55rem}
+.stone .cap .mr{font-size:clamp(1.5rem,2.3vw,2.1rem);line-height:1;color:var(--soil)}
+.stone .face{position:relative;flex:1;overflow:hidden;background:var(--cotton-2)}
+.stone .face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.85);transition:transform .8s var(--ease),filter .4s}
+.stone .label{flex:none;display:grid;grid-template-columns:auto 1fr;gap:.1rem .6rem;align-items:baseline;padding:.8rem .9rem 1rem;background:var(--cotton);min-height:5.4rem}
+.stone .n{font:400 .72rem var(--mono);color:var(--coral-ink)}
+.stone b{font:400 1.35rem/1.1 var(--serif)}
+.stone .d{grid-column:1/-1;font-size:.86rem;line-height:1.35;color:var(--muted);max-height:0;opacity:0;overflow:hidden;transition:opacity .3s,max-height .5s var(--ease)}
+.stone.text .face{display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(90deg,transparent 0 13px,rgba(33,29,26,.06) 13px 14px),var(--cotton-2)}
+.mill-type{display:flex;flex-direction:column;align-items:center;gap:.15rem;font:400 clamp(1rem,1.5vw,1.3rem)/1.2 var(--serif);color:var(--soil)}
+.mill-type span:nth-child(even){font-size:.8em;color:var(--coral-ink);line-height:1}
+.road .stone.on{flex-grow:2.6}
+.road .stone.on .d{max-height:4.5rem;opacity:1}
+.road .stone.on .face img{filter:none;transform:scale(1.03)}
+.stone:hover{color:var(--soil)}
+.stone:focus-visible{outline:3px solid var(--coral);outline-offset:4px}
+.kerb{display:flex;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1.25rem;color:var(--muted-dk);border-top:0}
+.kerb-line{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--muted-dk) 0 18px,transparent 18px 34px);opacity:.5}
+.road + .kerb{box-shadow:0 -1px 0 var(--soil-3)}
+@media (prefers-reduced-motion:no-preference){
+  .js .stone{transform:translateY(24px);opacity:0;animation:rise .8s var(--ease) forwards}
+  .js .stone:nth-child(2){animation-delay:.08s}.js .stone:nth-child(3){animation-delay:.16s}.js .stone:nth-child(4){animation-delay:.24s}.js .stone:nth-child(5){animation-delay:.32s}
+  @keyframes rise{to{transform:none;opacity:1}}
+}
+@media (prefers-reduced-motion:reduce){.stone,.stone .face img,.stone .d{transition:none}}
+@media (max-width:900px){
+  .road{height:auto;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:var(--g);padding-bottom:.25rem;scrollbar-width:none}
+  .stone{flex:0 0 min(68vw,17rem);height:24rem;scroll-snap-align:start}
+  .road .stone.on{flex-grow:0}
+  .stone .d{max-height:4.5rem;opacity:1}
+  .kerb .mono:last-child{display:none}
+}
+
+/* Market towns map (inside the Market chapter) */
+.towns{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2rem,5vw,4rem);align-items:center;margin-top:clamp(3.5rem,7vw,6rem);padding-top:clamp(2.5rem,5vw,4rem);border-top:1px solid var(--rule)}
+.towns h3{font-size:clamp(1.7rem,2.8vw,2.4rem);line-height:1.08;margin-bottom:1rem}
+@media (max-width:900px){.towns{grid-template-columns:1fr}}
 .map-wrap{position:relative}
 .zmap{width:100%;height:auto;display:block;overflow:visible}
 .zmap .ring{fill:none;stroke:var(--rule);stroke-width:1}
@@ -105,8 +147,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em
 .readout{border-top:1.5px solid var(--soil);margin-top:.5rem;padding-top:.9rem;min-height:7.5rem;display:grid;grid-template-columns:auto 1fr;gap:.25rem 1.25rem}
 .readout .km{font:400 clamp(2rem,3.4vw,2.8rem)/1 var(--serif);grid-row:span 3;color:var(--coral-ink);min-width:4.5ch}
 .readout .km small{font:400 .75rem var(--mono);color:var(--muted);display:block;margin-top:.35rem}
-.readout h2{font-size:1.4rem;line-height:1.15}
-.readout h2 .mr{color:var(--muted);font-size:1rem;margin-left:.35rem}
+.readout h4{font:400 1.4rem/1.15 var(--serif);margin:0}
+.readout h4 .mr{color:var(--muted);font-size:1rem;margin-left:.35rem}
 .readout p{margin:0;color:var(--muted);font-size:.95rem}
 .readout .chips{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.35rem}
 .chip{font:400 .68rem var(--mono);letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--rule);padding:.2rem .45rem;color:var(--soil);text-decoration:none;background:var(--white)}
