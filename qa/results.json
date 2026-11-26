@@ -57,13 +57,35 @@
   "form": {
    "errsShown": 4,
    "focused": "path",
-   "phoneErr": "Enter a 10-digit mobile or landline with STD code.",
+   "phoneErr": "Enter a 10-digit mobile, or a landline with STD code.",
    "done": true,
-   "doneText": "Thank you — your enquiry is complete.",
-   "networkRequestsAfterSubmit": 11,
+   "doneText": "Thank you. Your enquiry is complete.",
+   "networkRequestsAfterSubmit": 129,
    "formBack": true
   },
-  "filterHomeRows": 2,
+  "filterInteriorRows": 15,
+  "counts": {
+   "public": 3,
+   "township": 10,
+   "commercial": 3,
+   "flats": 17,
+   "bungalow": 15,
+   "interior": 15,
+   "all": 63
+  },
+  "tabCounts": [
+   "all=63",
+   "bungalow=15",
+   "flats=17",
+   "township=10",
+   "commercial=3",
+   "public=3",
+   "interior=15"
+  ],
+  "lbOpen": true,
+  "lbTitle": "Bedroom",
+  "lbClosed": true,
+  "brokenImgs": [],
   "menuOpen": true,
   "menuClosed": true,
   "firstTab": "Skip to content"

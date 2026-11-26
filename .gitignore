@@ -1,4 +1,2 @@
-assets/projects/*
-!assets/projects/.gitkeep
 node_modules/
 qa/screens/

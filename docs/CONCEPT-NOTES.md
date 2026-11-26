@@ -1,41 +1,54 @@
-# Concept notes — private
+# Concept notes — v2
 
-## What the research changed
-The brief assumed a project archive to curate. There isn't one: the live site lists building *types* and *client names*, but no named projects, and only three unlabelled project images. The real proof is the **client list** — 12 public bodies, including five agricultural market committees, the police housing corporation and education societies. So the concept is built around that, not around photography, and the case study is the APMC body of work rather than a single building I would have had to embellish.
+## What changed from v1, and why
+v1 was built from page text alone, because the images could not be fetched. It leaned on typography and placeholders and read as generic. For v2 I reopened the research in a real browser and found the practice's actual archive: about 50 architectural renderings hidden in unlabelled tabs, 15 interior photographs, both architects' portraits and the brand logo. Two drawing title blocks also gave verifiable project facts (Kalamna godowns; Ushakaal-9 for Swapna Shilp Developers). v2 is rebuilt around that material.
 
-## Creative direction: "the drawing set"
-A practice founded in 1980 by an architect trained in the drafting-board era, whose work is market yards, schools and housing — not lifestyle interiors. The site is organised like a set of drawings: each section is a numbered *sheet*, key facts sit in a *title block*, projects are an *index* with drawing codes (A-01, I-01), images sit in plates with drawing-style captions, and the case study uses line diagrams.
-- Paper `#F2EEE6`, ink `#1F1D1A`, one accent — laterite `#A3431F`, the red earth of the Deccan — used only for actions and pending items.
-- Newsreader (serif, for a measured editorial voice), Public Sans (plain, legible body), IBM Plex Mono (annotations). All OFL, self-hosted.
-- No dark/gold, no gradients, no cards-in-a-grid, no carousel, no animation beyond anchor scrolling.
-- Anti-generic test: remove the name and the page still could only belong to a Nagpur practice with a public-sector record.
+## Creative direction: "the archive, opened"
+- **The insight.** The practice's strongest asset is volume and range: 46 years, from market yards to children's bedrooms. Its current site hides that behind stock photos and generic copy. The concept makes the archive the centre of the site.
+- **Brand-true colour.** Charcoal `#373435` and coral `#F3754D` are taken directly from the logo, so this is an evolution of the identity, not a replacement. Coral is used for action and emphasis; on light backgrounds a darker coral keeps text contrast above 4.5:1.
+- **Type.** Archivo (a variable grotesk, condensed for headlines) echoes the logo's bold sans letterforms, with Public Sans for body text and IBM Plex Mono for project codes and captions. All are self-hosted and OFL-licensed.
+- **Honesty as design.** Every image is labelled "rendering" or "photograph". Unknown facts carry visible "To be confirmed" tags in the case study, and private homeowners are anonymised. The concept looks confident without claiming anything it can't back up.
+- **What was deliberately avoided:** stock imagery, testimonials, invented statistics, carousels, gradients, glassmorphism, and a full-bleed hero photo (the source images are about 800 px wide and would look soft).
 
 ## Pages and interactions
-**Home** — concept notice · cover with title block (1980, disciplines, 12 public clients, Nagpur) · Sheet 01 filterable index of 9 typologies with real client names · Sheet 02 case-study feature · Sheet 03 A / I / P services, each with "suits" and who leads · Sheet 04 the two architects as a qualification timeline · Sheet 05 enquiry: 5 project-type paths that change the form's example text, validation, local confirmation, direct contact, "what happens next".
-**Case study** — facts strip with explicit "To be confirmed" tags · archive image plate · the building type · diagram of yard elements · schematic of the five towns · process stages · "why it matters" · list of material the practice needs to supply · closing CTA.
+**Home**
+- **Hero:** dark, four-image mosaic covering public, flat-scheme, interior and township work, with type-count links that jump to the filtered archive.
+- **Archive:** 63 projects with tabbed filters (bungalows, flat schemes, townships, commercial, public, interiors). It opens on a curated mix of 18 with "Show all 63". Each tile opens an accessible lightbox with ←/→ navigation, a type label and a rendering/photo label.
+- **Selected work:** APMC (links to the case study), Pearl Heritage and the Ushakaal series.
+- **Interiors:** six-photo editorial grid.
+- **Services:** architecture, interiors and PMC, each saying who it's for.
+- **Practice:** greyscale portraits and qualification timelines.
+- **Clients:** typographic list of all 26 clients.
+- **Enquiry:** five project paths, validation, local confirmation and direct contact.
 
-## How it improves on the current site
-| Current | Concept |
+**Case study (APMC Nagpur)**
+- **Facts strip:** taken from the drawing title block.
+- **Three chapters:** the godowns (with the title block reproduced and a layout diagram drawn from the rendering), the market shed, and the auditorium (with its Marathi signage).
+- **Five committees:** list plus a schematic map.
+- **What it proves to a client**, and the material the practice still needs to supply.
+
+## How it improves the customer journey
+| Current site | Concept |
 |---|---|
-| "Architect in Nagpur" hero, generic home-interiors tagline | Leads with what they actually build and since when |
-| Client list buried on its own page, unformatted | Client names are the evidence, attached to each building type |
-| Projects page = category headings | Index by typology a visitor can filter to their own case |
-| Service pages of generic consulting copy | Three clear engagements, who each suits, who leads PMC |
-| Founder and director hidden in About | Lineage shown as credentials on the homepage |
-| Single "Consult online now" phone link | Enquiry routed by project type, with expectations set |
-| Unverifiable testimonials, placeholders, duplicate host | Nothing shown that can't be backed up |
+| Stock photos (handshake, blueprint) on the homepage | The practice's own work from the first screen |
+| About 50 renderings hidden in unlabelled tabs on a service page | A filterable archive with names, codes and labels |
+| Projects page: three images, no names | 63 items plus a full case study |
+| No founder presence | Portraits, titles and credentials |
+| Client list as plain text on its own page | Client list as proof, next to the work |
+| Single "Consult online now" phone link | Enquiry routed by project type, with "what happens next" |
+| Unverifiable testimonials | Removed |
 
 ## Draft email (not sent)
-Subject: A redesign idea built around your APMC and public-sector work
+Subject: Your Kalamna market-yard drawings deserve a better home
 
 Dear Mr. Pankaj Chinchmalatpure,
 
-I'm Tejas, an independent web designer. While looking at architecture practices in Nagpur I spent some time on your website, and one thing stood out: your client list — five agricultural market committees, the Police Housing Corporation, VSPM and others — is a far stronger argument for the practice than anything on the homepage, yet it sits on a page few visitors will find.
+I'm Tejas, an independent web designer. While going through your website I found something most visitors never will: around fifty renderings tucked inside the tabs of the Architectural Design page — the APMC godowns at Kalamna, the Ushakaal buildings, Pearl Heritage, fifteen bungalows — with no names or captions, while the homepage shows stock photos of handshakes and blueprints.
 
-I've built an unofficial two-page concept to show what it could look like if the site led with that record: the work organised by building type, a case study of your market-yard projects, your and Mr. Arun Chinchmalatpure's backgrounds, and an enquiry route that separates a bungalow client from an institution looking for PMC. It uses only what your current site publishes, and it has gaps — years, photographs, project details — that only your office can fill.
+I've built an unofficial two-page concept that puts that archive at the front: the work filterable by building type, a case study of the APMC Nagpur designs built from the title block on your own drawing, your and Mr. Arun Chinchmalatpure's credentials, and an enquiry route that separates a bungalow client from a developer or a public body. It uses only what you've already published, and it marks clearly what only your office can confirm — years, built status, client names.
 
-Could I show it to you in fifteen minutes, in person at your office or on a call? There's no obligation; I'd value your reaction either way.
+Could I show it to you for fifteen minutes, at your office or on a call? No obligation; I'd value your reaction either way.
 
 Regards,
 Tejas
-[phone] · [portfolio link]
+[phone] · [link to concept]

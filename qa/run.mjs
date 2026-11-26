@@ -9,13 +9,14 @@ const pages=["index.html","case-study-apmc.html"]; const vps=[[390,844],[768,102
 for (const pg of pages) for (const [w,h] of vps) {
   const p = await b.newPage({viewport:{width:w,height:h}}); const errs=[]; const bad=[];
   p.on("console",m=>{if(m.type()==="error")errs.push(m.text())}); p.on("pageerror",e=>errs.push(e.message));
-  p.on("response",r=>{ if(r.status()>=400 && !r.url().includes("/assets/projects/")) bad.push(r.status()+" "+r.url())});
+  p.on("response",r=>{ if(r.status()>=400) bad.push(r.status()+" "+r.url())});
   await p.goto("http://localhost:4173/"+pg,{waitUntil:"networkidle"});
+  await p.evaluate(async()=>{for(let y=0;y<document.body.scrollHeight;y+=400){scrollTo({top:y,behavior:'instant'});await new Promise(r=>setTimeout(r,60))}scrollTo({top:0,behavior:'instant'})}); await p.waitForTimeout(900);
   const ov = await p.evaluate(()=>document.documentElement.scrollWidth - innerWidth);
   const robots = await p.$eval('meta[name=robots]',m=>m.content);
   const anchors = await p.evaluate(()=>[...document.querySelectorAll('a[href^="#"]')].map(a=>a.getAttribute("href")).filter(h=>h.length>1&&!document.querySelector(h)));
   await p.screenshot({path:`qa/screens/${pg.replace(".html","")}-${w}.png`,fullPage:true});
-  out.push({pg,w,overflow:ov,robots,brokenAnchors:anchors,consoleErrors:errs.filter(e=>!/assets\/projects|404/.test(e)),badResponses:bad});
+  out.push({pg,w,overflow:ov,robots,brokenAnchors:anchors,consoleErrors:errs,badResponses:bad});
   await p.close();
 }
 // form test
@@ -31,11 +32,15 @@ await p.fill("#f-phone","98765 43210"); await p.click("#enquiry-form button[type
 const done = await p.isVisible("#enquiry-done"); const doneText = await p.textContent("#enquiry-done h3");
 let reqs=0; p.on("request",()=>reqs++);
 await p.click("#enquiry-again"); const formBack = await p.isVisible("#enquiry-form");
-// filter
-await p.click('button[data-filter=home]'); const vis = await p.$$eval(".index li",l=>l.filter(x=>!x.hidden).length);
+// filter + lightbox
+await p.click('.tabs [data-filter=interior]'); const vis = await p.$$eval(".archive li",l=>l.filter(x=>!x.hidden).length);
+const counts = await p.evaluate(()=>{const c={};PCA_ARCHIVE.forEach(x=>c[x.type]=(c[x.type]||0)+1);c.all=PCA_ARCHIVE.length;return c});
+const tabCounts = await p.$$eval('.tabs button',b=>b.map(x=>x.dataset.filter+'='+x.querySelector('sup').textContent));
+await p.click('.archive li:not([hidden]) .tile'); const lbOpen = await p.isVisible('#lightbox'); await p.keyboard.press('ArrowRight'); const lbTitle = await p.textContent('#lb-title'); await p.keyboard.press('Escape'); const lbClosed = !(await p.isVisible('#lightbox'));
+const brokenImgs = await p.evaluate(async()=>{const bad=[];for(const x of PCA_ARCHIVE){for(const s of ['','-sm']){const ok=await new Promise(r=>{const i=new Image();i.onload=()=>r(1);i.onerror=()=>r(0);i.src='assets/img/'+x.file+s+'.webp'});if(!ok)bad.push(x.file+s)}}return bad});
 // menu
-await p.click(".menu-toggle"); const menuOpen = await p.isVisible("#site-nav a[href='#work']"); await p.keyboard.press("Escape"); const menuClosed = !(await p.isVisible("#site-nav a[href='#work']"));
+await p.click(".menu-toggle"); const menuOpen = await p.isVisible("#site-nav a[href='#archive']"); await p.keyboard.press("Escape"); const menuClosed = !(await p.isVisible("#site-nav a[href='#archive']"));
 // keyboard: first tab goes to skip link
 await p.goto("http://localhost:4173/index.html"); await p.keyboard.press("Tab"); const firstTab = await p.evaluate(()=>document.activeElement.textContent);
-out.push({form:{errsShown:errsShown.length,focused,phoneErr,done,doneText,networkRequestsAfterSubmit:reqs,formBack},filterHomeRows:vis,menuOpen,menuClosed,firstTab});
+out.push({form:{errsShown:errsShown.length,focused,phoneErr,done,doneText,networkRequestsAfterSubmit:reqs,formBack},filterInteriorRows:vis,counts,tabCounts,lbOpen,lbTitle,lbClosed,brokenImgs,menuOpen,menuClosed,firstTab});
 console.log(JSON.stringify(out,null,1)); await b.close(); srv.close();

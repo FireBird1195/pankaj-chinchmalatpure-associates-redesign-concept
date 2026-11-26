@@ -1,22 +1,25 @@
 # Pankaj Chinchmalatpure & Associates — redesign concept (unofficial)
 
-**This is an independent, speculative design concept.** It is not the website of Pankaj Chinchmalatpure & Associates, and the practice has not commissioned, endorsed or approved it. Business facts come from the practice's own public website and await its confirmation.
+**This is an independent, speculative design concept.** It is not the website of Pankaj Chinchmalatpure & Associates, and the practice has not commissioned, endorsed or approved it. Facts, renderings and photographs come from the practice's own public website and are used with permission obtained by the concept's author. Renderings are design visualisations, not photographs of completed buildings.
 
-## What it is
-A two-page static prototype:
-- `index.html` — practice homepage: lineage, a filterable index of work by building type, services, leadership and an enquiry path.
-- `case-study-apmc.html` — case study of the practice's work for five Agricultural Produce Market Committees.
+## Pages
+- `index.html` — homepage: brand-led hero, a filterable archive of 63 projects with a lightbox, selected work, interiors, services, leadership, clients, enquiry.
+- `case-study-apmc.html` — case study of three designs for A.P.M.C. Nagpur.
 
-No framework, no build step, no backend, no tracking. Fonts (Newsreader, Public Sans, IBM Plex Mono — SIL OFL) are self-hosted. The enquiry form validates locally and **sends and stores nothing**.
-
-## Run locally
-Any static server from this folder, e.g. `npx serve .` or `python -m http.server`, then open http://localhost:3000 (or :8000).
+## Stack
+Static HTML, CSS and vanilla JS. No build step, no backend, no tracking, no cookies. Fonts (Archivo, Public Sans, IBM Plex Mono; SIL OFL) are self-hosted. Archive data lives in `js/projects.js`. The enquiry form validates locally and **sends and stores nothing**.
 
 ## Images
-No photographs of the practice's work are included in this repository. Image frames show a drawn placeholder until files are placed in `assets/projects/` (git-ignored). Only after the practice grants permission: `node scripts/fetch-archive-images.mjs`, then convert to JPEG/WebP.
+`assets/img/` holds web-sized WebP copies (full size plus `-sm` thumbnails). Regenerate them from the practice's originals with `python3 scripts/process_images.py <source-dir> assets/img` (needs Pillow).
 
-## Deploy (Cloudflare Pages)
-Framework preset: None · Build command: (empty) · Output directory: `/`. All links are relative, so it works at any base path. `_headers` sends `X-Robots-Tag: noindex` and a strict CSP; every page also carries `<meta name="robots" content="noindex, nofollow">` and `robots.txt` disallows all.
+## Run locally
+`npx serve .` or `python -m http.server` in this folder.
+
+## Deploy
+- **GitHub Pages:** Settings → Pages → deploy from `main` / root. Links are relative, so the `/repo-name/` base path works.
+- **Cloudflare Pages:** preset None, no build command, output `/`. `_headers` adds `X-Robots-Tag: noindex` and a CSP.
+
+Every page carries `noindex, nofollow`; `robots.txt` disallows crawling.
 
 ## QA
-`node qa/run.mjs .` (needs Playwright) — checks three viewports for overflow, console errors, broken anchors, noindex, form validation, filter and menu. See `docs/QA-REPORT.md`.
+`node qa/run.mjs .` (Playwright). See `docs/QA-REPORT.md` and `docs/VERIFICATION.md`.
