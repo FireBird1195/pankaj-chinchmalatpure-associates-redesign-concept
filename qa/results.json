@@ -60,10 +60,10 @@
    "phoneErr": "Enter a 10-digit mobile, or a landline with STD code.",
    "done": true,
    "doneText": "Thank you. Your enquiry is complete.",
-   "networkRequestsAfterSubmit": 129,
+   "networkRequestsAfterSubmit": 125,
    "formBack": true
   },
-  "filterInteriorRows": 15,
+  "filterInteriorRows": 30,
   "counts": {
    "public": 3,
    "township": 10,
@@ -74,16 +74,21 @@
    "all": 63
   },
   "tabCounts": [
-   "all=63",
-   "bungalow=15",
-   "flats=17",
-   "township=10",
-   "commercial=3",
-   "public=3",
-   "interior=15"
+   "All 63",
+   "बाजार Market 3",
+   "शाळा School 1",
+   "शहर City 29",
+   "घर Home 30"
   ],
+  "chCounts": {
+   "market": 3,
+   "city": 29,
+   "school": 1,
+   "home": 30
+  },
+  "ro": "\n          31KM FROM ZERO MILE\n          Saoner सावनेर\n          \n          Agricultural Produce Market Committee, SaonerBabasaheb Kedar Ginning Pressing & Prakriya Sansthaबाजार Market →गिरणी Mill →\n        ",
   "lbOpen": true,
-  "lbTitle": "Bedroom",
+  "lbTitle": "Bungalow 02",
   "lbClosed": true,
   "brokenImgs": [],
   "menuOpen": true,

@@ -1,4 +1,4 @@
-# Fact and asset verification — v2
+# Fact and asset verification — v3
 
 Researched 26 Nov 2026 from chinchmalatpurearchitects.com (every page in its navigation plus the WordPress page list), its image library, and a third-party directory listing. Images were viewed at full size and their printed title blocks read.
 
@@ -34,6 +34,18 @@ Family relationship between the two architects: not stated anywhere. The concept
 | 15 interiors | P | Photographs from the Interior Designing gallery; room names are descriptive, written by the concept author (I) |
 | All building images are renderings, not photographs | I | Several carry visualiser marks ("Image Creation", "MK"). Every one is labelled "rendering" in the concept, and the footer says so |
 | Counts (15/17/10/3/3/15 = 63) | — | Counts of published images in this concept, labelled as such, not as total output |
+
+## v3 additions: map, chain and Marathi
+| Claim | Status | Note |
+|---|---|---|
+| Zero Mile Stone at about 21.1498 N, 79.0806 E; "set by British surveyors at the centre of colonial India" | Public sources | Widely documented. Wording kept general; confirm the exact phrasing before production |
+| Town coordinates (Kalmeshwar, Saoner, Parseoni/Parshiwani, Katol, Patansawangi) | Wikipedia and similar | Distances are approximate straight lines, rounded, and labelled "approximate" on the page |
+| Kalamna market yard position | I | Approximate (east Nagpur), about 5 km |
+| "Tatansawangi" in the client list read as Patansawangi (Saoner taluka) | I | Marked TBC on the page. **C** |
+| Katol as a cotton-trading town | Wikipedia (Katol) | Used only as context |
+| Ginning & Pressing society = ginning and pressing; Soot Girni = spinning mill | I | Inferred from the names. The practice's role at each (which buildings) **C** |
+| Marathi words: बाजार, गिरणी, शाळा, शहर, घर, कापूस, सूतगिरणी, सुरुवात; town names in Devanagari | Author | Common Marathi. Have a native speaker proofread before production |
+| उषःकाल = "dawn" | Author | The Devanagari spelling matches the signage on the practice's renderings |
 
 ## Clients and services
 Client list (12 public, 14 private), building types, consultants (structural, electrical, plumbing, air-conditioning), valuation, Vaastu, and the conceptual → schematic → development stages: all **P**, from the Client List, Projects, Why Us and Home pages. Spellings normalised (Prasadic → Prasadik, Wandkhede → Wankhede, Babashaheb → Babasaheb): **C**.
